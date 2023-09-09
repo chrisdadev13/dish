@@ -36,7 +36,7 @@ export default function Features() {
               ))}
             </ul>
           </div>
-          <div className="sticky top-0 flex h-screen w-full items-center">
+          <div className="top-0 hidden h-screen w-full items-center">
             <div className="relative aspect-square w-full rounded-2xl bg-gray-100">
               {features.map((feature, index) => (
                 <feature.card id={feature.id} key={index} />
@@ -45,15 +45,6 @@ export default function Features() {
           </div>
         </div>
       </div>
-      <div className="relative px-24 text-center md:px-20 lg:px-72 xl:px-96">
-        <h1 className="text-6xl font-bold">
-          Tienda. Deliveries. Link in bio. WhatsApp. Clientes. Venta. Cash. Tu
-          E-Commerce
-        </h1>
-        <div className="absolute bottom-[-6%] left-0 right-0 top-auto h-full w-full bg-gradient-to-t from-white to-transparent"></div>
-      </div>
-
-      <h1 className="pt-10 text-4xl ">Todo en un solo lugar</h1>
     </>
   );
 }

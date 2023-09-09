@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect } from "react";
 
-import { Avatar, AvatarImage, AvatarFallback } from "~/components/ui/avatar";
+import { Avatar, AvatarImage } from "~/components/ui/avatar";
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
 
@@ -171,7 +171,7 @@ export const ThirdCard = ({ id }: CardProps) => {
             className="my-3"
           />
           {["Chris Rock", "Joe Doe", "Rick Roll", "Taylor Sanchez"].map(
-            (member, index) => (
+            (member: string, index: number) => (
               <div
                 key={index}
                 className="my-2 flex items-center justify-center"
@@ -189,7 +189,7 @@ export const ThirdCard = ({ id }: CardProps) => {
                     {member.replace(/ /g, "").trim().toLowerCase()}@dishes.io
                   </p>
                 </div>
-                <p>${Math.random().toFixed(1) + index}</p>
+                <p>${parseInt(Math.random().toFixed(1)) + index}</p>
               </div>
             )
           )}

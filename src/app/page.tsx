@@ -4,26 +4,14 @@ import Image from "next/image";
 import { Badge } from "~/components/ui/badge";
 import { Github } from "lucide-react";
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "~/components/ui/accordion";
-
-import dynamic from "next/dynamic";
-
-const NoSSR = dynamic(() => import("./components/features"), { ssr: false });
-
-export default async function Home() {
+export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center">
-      <div className="px-52 pt-52">
+      <div className="px-10 pt-10 md:px-52 md:pt-52">
         <div className="flex w-full flex-1 items-center justify-center">
           <div className="mr-2">
             <div className="flex flex-col text-6xl font-bold">
               <h1 className=" flex items-center">Maneja los pedidos de </h1>
-              <span></span>
               <h1 className="z-50">tu negocio de forma facil</h1>
               <h1 className="flex items-center">
                 por
@@ -44,7 +32,7 @@ export default async function Home() {
                 Facilita tu vida y la vida de tus clientes.{" "}
               </p>
               <p className="text-lg font-medium text-gray-600">
-                Empieza a recibir tus ordenes de forma sencilla
+                Empieza a recibir tus pedidos de forma sencilla
               </p>
               <div>
                 <Button className="mr-2">Iniciar Sesion</Button>
@@ -52,7 +40,7 @@ export default async function Home() {
               </div>
             </div>
           </div>
-          <div className="ml-2 flex items-center justify-center rounded-2xl bg-green-50/10 p-8">
+          <div className="ml-2 hidden items-center justify-center rounded-2xl bg-green-50/10 p-8 lg:flex xl:flex 2xl:flex">
             <Image
               src="/OpenDoodles-Coffee.png"
               width={600}
@@ -61,10 +49,10 @@ export default async function Home() {
             />
           </div>
         </div>
-        <div className="mt-44 flex w-full flex-col items-center justify-center px-32">
+        <div className="my-44 flex w-full flex-col items-center justify-center">
           <h1 className="text-center text-4xl font-extrabold">
             Potencia la marca de tu negocio de forma gratuita{" "}
-            <span>
+            <span className="text-secondary-700">
               Dishes, te facilita el manejo de tus productos, ordenes y pedidos.
             </span>
           </h1>
@@ -80,60 +68,16 @@ export default async function Home() {
           </Link>
         </div>
       </div>
-      <NoSSR />
+      <div className="relative px-10 text-center md:px-52">
+        <h1 className="text-6xl font-bold">
+          Tienda. Deliveries. Link in bio. WhatsApp. Clientes. Venta. Cash. Tu
+          E-Commerce
+        </h1>
+        <div className="absolute bottom-[-6%] left-0 right-0 top-auto h-full w-full bg-gradient-to-t from-white to-transparent"></div>
+      </div>
+      <h1 className="pt-10 text-4xl ">Todo en un solo lugar</h1>
       <Image
         src="/Foodies.png"
-        className="my-14"
-        width={600}
-        height={600}
-        alt="Hero image - ordering food"
-      />
-      <div className="mt-20 w-2/4 ">
-        <h1 className="text-center text-4xl font-bold">Preguntas Frecuentes</h1>
-        <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="item-1">
-            <AccordionTrigger>¿Cómo funciona Dishes?</AccordionTrigger>
-            <AccordionContent>
-              Dishes te permite crear un catalogo atractivo con todos los
-              productos de tu negocio. Actuando como una tienda virtual para tus
-              clientes.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-2">
-            <AccordionTrigger>¿Todo de forma gratuita?</AccordionTrigger>
-            <AccordionContent>
-              Asi es, la aplicación es completamente gratuita y de codigo
-              abierto. Esperamos seguir creando valor de esta forma a largo
-              plazo
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger>¿Puedo invitar a mi equipo?</AccordionTrigger>
-            <AccordionContent>
-              Sí, el objetivo de Dishes es permitirte crear un ambiente
-              colaborativo para ti y los miembros de tu negocio. La integración
-              con WhatsApp, permite que multiples personas puedan tomar varias
-              ordenes al mismo tiempo, facilitando el manejo de tu negocio y
-              mejorando la experiencia de usuario de tus clientes de forma
-              considerable
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-4">
-            <AccordionTrigger>¿Cómo recibo los pagos?</AccordionTrigger>
-            <AccordionContent>
-              De momento Dishes no puede actuar como intermediario al momento de
-              permitirte recibir pagos de tus clientes :/ Pero si puedes
-              especificar los medios de pago que acepta tu negocio
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      </div>
-      <h1 className="mb-5 mt-60 text-4xl font-bold">
-        Crea tu tienda virtual ya mismo
-      </h1>
-      <Button size="lg">Empieza Ya</Button>
-      <Image
-        src="/Yuppies-LivingArea.png"
         className="my-14"
         width={600}
         height={600}
